@@ -43,7 +43,7 @@
     <distributionManagement>
    <snapshotRepository>
       <id>snapshots</id>
-      <url>http://100.26.102.67:8081/nexus/content/repositories/snapshots</url>
+      <url>http://54.89.4.235:8081/nexus/content/repositories/snapshots</url>
    </snapshotRepository>
 </distributionManagement>
 
@@ -164,19 +164,6 @@
     </build>
 
     <profiles>
-<profile>
-<id>sonar</id>
-<activation>
-<activeByDefault>true</activeByDefault>
-</activation>
-<properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
-<sonar.host.url>
-http://54.87.165.225:9000
-</sonar.host.url>
-</properties>
-</profile>
-
         <!-- GlassFish specific version of build -->
         <profile>
             <id>glassfish</id>
@@ -212,6 +199,18 @@ http://54.87.165.225:9000
                 </plugins>
             </build>
         </profile>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://35.175.129.180:9000
+</sonar.host.url>
+</properties>
+</profile>
 
         <!-- WebLogic Profile -->
         <profile>
